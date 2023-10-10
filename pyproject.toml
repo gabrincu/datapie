@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "datapie"
+version = "0.1.0"
+description = ""
+authors = ["gabrincu <contact@gabimarincu.xyz>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+textual = "^0.39.0"
+textual-dev = "^1.2.1"
+toml = "^0.10.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
