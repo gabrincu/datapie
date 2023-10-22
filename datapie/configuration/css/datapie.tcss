@@ -1,0 +1,35 @@
+#dialog {
+    background: $panel;
+    border: round $accent;
+}
+
+
+Label {
+    margin-bottom: 1;
+    margin-left: 2;
+    text-align: center;
+}
+
+Select {
+    width: 20%;
+}
+
+Button {
+    margin-left: 8;
+    margin-top: 1;
+}
+
+TableView {
+    height: 100%;
+    width: auto;
+    background: $panel;
+    border: round $accent;
+}
+
+
+DbTree {
+    height: 100%;
+    width: 20%;
+    background: $panel;
+    border: round $accent;
+}
