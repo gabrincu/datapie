@@ -1,5 +1,5 @@
 # Terminal based TUI DB Client written in Python
-
+![Screenshot](./screenshot.png)
 Datapie is a simple tool made out of frustration in the lack of good terminal tools to handle database exploration and simple queries.
 
 ## Aims
