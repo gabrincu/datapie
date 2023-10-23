@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-textual = "^0.39.0"
+textual = {extras = ["syntax"], version = "^0.40.0"}
 textual-dev = "^1.2.1"
 toml = "^0.10.2"
 

@@ -2,9 +2,10 @@ from textual.widgets import Tree, Static
 from textual.app import ComposeResult
 from rich.console import RenderableType
 from textual.message import Message
-from textual import log, on
+from textual import log, on, events
 
 
+#TODO: use reactive attribute for Tree query
 class DbTree(Static):
     def __init__(
         self,
@@ -54,3 +55,9 @@ class DbTree(Static):
         if not event.node.is_root:
             query = f"Select * from {event.node.label} limit 20;"
             self.post_message(self.ExploreTable(event.node, query))
+    
+    @on(events.Focus)
+    def on_focus(self, event: events.Focus):
+        print("merge tree")
+        self.add_class("focused")
+
