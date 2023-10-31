@@ -2,6 +2,14 @@
     border: solid $accent;
 }
 
+MainScreen {
+    align: center middle;
+}
+
+ConnectionPicker {
+    align: center middle;
+}
+
 TableView {
     height: 50%;
     width: 100%;
@@ -38,10 +46,22 @@ TextArea {
     border: solid $accent;
 }
 
+VimEditor {
+    height: 50%;
+    width: 100%;
+    background: $panel;
+    border: solid $accent;
+    border-title-align: left;
+    border-subtitle-align: left;
+    border-subtitle-style: bold;
+    border-subtitle-color: red;
+    border-subtitle-background: white;
+}
+
 TableView:focus-within,
 DbTree:focus-within,
 TextArea:focus {
-    border: round $primary; 
+    border: round red; 
 }
 
 
@@ -49,4 +69,70 @@ TableView,
 DbTree,
 TextArea {
     border: round dimgray; 
+}
+
+
+#psql-form-host-input,
+#psql-form-name-input,
+#psql-form-username-input,
+#psql-form-password-input,
+#psql-form-connection-name-input,
+#mysql-form-host-input,
+#mysql-form-name-input,
+#mysql-form-username-input,
+#mysql-form-password-input,
+#mysql-form-connection-name-input,
+#sqlite-form-connection-name-input
+#sqlite-form-path-input {
+   margin-bottom: 1; 
+   width: 40; 
+}
+
+#sqlite-form-container,
+#mysql-form-container,
+#psql-form-container,
+#db-type-form {
+    border: round $accent;
+    align: center middle;
+}
+
+
+#sqlite-form-label,
+#psql-form-label,
+#mysql-form-label {
+    width: 30%;
+    content-align: center middle;
+    margin-bottom: 1;
+}
+
+
+#connection-picker-label {
+    width: auto;
+    margin: 1;
+}
+
+#connection-picker-select {
+    width: 50%;
+    margin-bottom: 1;
+}
+
+#sqlite-form-connect-button,
+#sqlite-form-save-button,
+#mysql-form-connect-button,
+#mysql-form-save-button,
+#psql-form-connect-button,
+#psql-form-save-button {
+    margin: 1
+}
+
+#connection-picker-form {
+    height: 40%;
+    width: 40%;
+    align: center middle;
+    border: round $accent;
+}
+
+#mysql-form-button-container {
+    height: auto;
+    align: center middle;
 }

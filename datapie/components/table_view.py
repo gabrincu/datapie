@@ -5,7 +5,6 @@ from rich.text import Text
 from textual import events, on
 
 
-# TODO: Use Reactive attribute for table query
 class TableView(Static):
     def __init__(
         self,
@@ -41,16 +40,6 @@ class TableView(Static):
     def on_mount(self):
         print("Mounting table widget...")
         
-        # table = self.query_one(DataTable)
-        # table_data = self.get_table_data("artists")
-        # columns = self.get_columns(table_data)
-        # table.add_columns(*columns)
-        # rows = [row for row in table_data]
-        # for number, row in enumerate(rows):
-        #     label = Text(str(number+1), style="#B0FC38 italic")
-        #     table.add_row(*row, label=label)
-        #
-
     def get_table_data(self, table_name):
         cursor = self.connection.execute(f"select * from {table_name} limit 10")
         return cursor
@@ -64,6 +53,7 @@ class TableView(Static):
         content_switcher = self.query_one(ContentSwitcher)
         try:
             cursor.execute(query)
+            print(cursor)
             table = self.query_one(DataTable)
             table.clear(columns=True)
             columns = self.get_columns(cursor)
@@ -76,8 +66,6 @@ class TableView(Static):
                 content_switcher.current = "results-table"
 
         except Exception as e:
-            label = self.query_one(Label)
-            label.renderable = f"{e}"
             content_switcher.current = "status-label"
             print(f"Error executing SQL: {e}")
 

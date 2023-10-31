@@ -10,6 +10,8 @@ python = "^3.10"
 textual = {extras = ["syntax"], version = "^0.40.0"}
 textual-dev = "^1.2.1"
 toml = "^0.10.2"
+psycopg2 = "^2.9.9"
+mysql-connector-python = "^8.2.0"
 
 
 [build-system]
