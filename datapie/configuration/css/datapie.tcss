@@ -136,3 +136,15 @@ TextArea {
     height: auto;
     align: center middle;
 }
+
+CommandModeBox {
+    align: center middle;
+    width: 60;
+    height: 13;
+}
+
+#command_container {
+    align: center middle;
+    width: 60;
+    height: 4;
+}

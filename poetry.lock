@@ -721,6 +721,20 @@ pygments = ">=2.13.0,<3.0.0"
 jupyter = ["ipywidgets (>=7.5.1,<9)"]
 
 [[package]]
+name = "sqlglot"
+version = "19.0.3"
+description = "An easily customizable SQL parser and transpiler"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "sqlglot-19.0.3-py3-none-any.whl", hash = "sha256:27df5eed15b92426113ac7cbb072c11024f880347ca0e90bb266af456853d20a"},
+    {file = "sqlglot-19.0.3.tar.gz", hash = "sha256:69ea28d2e215b96c887952ea43beda8c449d19574b7110ca07e7218c43d109f3"},
+]
+
+[package.extras]
+dev = ["autoflake", "black", "duckdb (>=0.6)", "isort", "mypy (>=0.990)", "pandas", "pdoc", "pre-commit", "pyspark", "python-dateutil", "types-python-dateutil"]
+
+[[package]]
 name = "textual"
 version = "0.40.0"
 description = "Modern Text User Interface framework"
@@ -1039,4 +1053,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "231cfd168c9f725050dd7bad2d7c2cbcce5d6be010c705dee62b943cd26fc9bc"
+content-hash = "4628005c8e202db6bda2eb468e1a01c548f7fdb03775310bb6464fdc464a3e5b"

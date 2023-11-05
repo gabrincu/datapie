@@ -5,6 +5,8 @@ from textual.message import Message
 from textual import on, events
 
 
+#TODO: Add limit to select queries by default, add pagination to table so we don't load 1 trillion rows and detonate our PCs
+
 class DbTree(Static):
     def __init__(
         self,

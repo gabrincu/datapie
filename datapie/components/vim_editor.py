@@ -4,6 +4,8 @@ from textual.binding import Binding
 from enum import Enum
 from textual.reactive import reactive
 
+from datapie.components.table_view import TableView
+
 
 class Modes(Enum):
     NORMAL = "normal"
@@ -47,8 +49,13 @@ class VimEditor(TextArea):
     def _on_key(self, event: events.Key):
         if self.mode == Modes.NORMAL.value:
             self.current_character = event.character
-            if event.key not in ("ctrl+q", "tab"):
+            if event.key not in ("ctrl+q", "colon"):
                 event.prevent_default()
+            if event.key == "tab":
+                table_view = self.app.children[0].query_one(TableView)
+                table = table_view.get_data_table()
+                table.focus()
+
             match event.character:
                 case "i":
                     self.mode = Modes.INSERT.value

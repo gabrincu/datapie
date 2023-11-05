@@ -12,6 +12,7 @@ textual-dev = "^1.2.1"
 toml = "^0.10.2"
 psycopg2 = "^2.9.9"
 mysql-connector-python = "^8.2.0"
+sqlglot = "^19.0.3"
 
 
 [build-system]

@@ -63,7 +63,7 @@ class SQLiteForm(Static):
                 )
             )
 
-
+# TODO: Configure this as well
 class PSQLForm(Static):
     def compose(self) -> ComposeResult:
         with Vertical(id="psql-form-container"):
@@ -85,6 +85,7 @@ class PSQLForm(Static):
                     yield Button("Save Config", id="psql-form-save-button")
 
 
+# TODO: Configure this as well
 class MySQLForm(Static):
     class MySQLConnectMessage(Message):
         pass
